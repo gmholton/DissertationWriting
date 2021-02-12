@@ -1,0 +1,84 @@
+% \setmainfont{Linux Libertine O}
+
+% set page margins here
+\RequirePackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+
+\usepackage{blindtext}
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{ backgroundcolor = \color{lightgray}, xleftmargin = 2cm, xrightmargin = 2cm, language = TeX,
+                   framexleftmargin = 1em, framexbottommargin = .25em, framextopmargin = .25em,
+                   aboveskip = 1em, belowskip = 1em
+}
+
+
+\usepackage{soul}
+\usepackage{tipa}
+\newcommand{\schwa}{\textschwa}
+\newcommand{\eps}{\textepsilon}
+
+\usepackage{enumerate}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+% \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+% \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+% \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{makecell}
+
+
+\usepackage{xspace}
+
+\usepackage[width=0.8\textwidth]{caption}
+
+\usepackage{natbib}
+\bibpunct[:~]{(}{)}{,}{a}{}{,}
+\newcommand{\BIBand}{\&}
+\setlength{\bibsep}{0pt}
+\setlength{\bibhang}{2em}
+\bibliographystyle{glossa}
+\renewcommand{\bibsection}{}
+\newcommand\namecite{\citet}
+\newcommand\citeboth{\citealt}
+\newcommand{\quotecite}[2][]{\citeauthor{#2}'s (\citeyear[#1]{#2})}
+\renewcommand\cite{\citep}
+
+\newcommand{\high}{\textsc{high}\xspace}
+\newcommand{\low}{\textsc{low}\xspace}
+\newcommand{\level}{\textsc{level}\xspace}
+\newcommand{\gloss}[1]{\textsc{\lowercase{#1}}}
+\newcommand{\gl}[1]{\textsc{\lowercase{#1}}}
+\newcommand{\REF}[2][]{(\ref{#2}#1)}
+\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\from}{\textless\xspace}
+
+%\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+    urlcolor=cyan,linkcolor=black,citecolor=black}
+
+
+
+% control hyphenation
+\pretolerance4000
+\tolerance7000
+\emergencystretch0pt
+\righthyphenmin4
+\lefthyphenmin4
+
+\usepackage{graphicx}
+\graphicspath{{figures/}} % figures in the figures folder
+
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}[hang]{\bfseries\huge} 
+{Chapter \ \thechapter:} % label
+{1ex}{}[]
+
+
+\titleformat{\paragraph}[hang]{\normalfont\bfseries}{\theparagraph.}{0.5ex}{}
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}

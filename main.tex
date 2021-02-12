@@ -1,0 +1,65 @@
+% many guides recommend using the report document class rather than book
+% but I find that the book class simplifies numbering in the preamble
+\documentclass[12pt,oneside]{book} 
+\usepackage[utf8]{inputenc}
+
+\RequirePackage[no-math]{fontspec}[2017/03/31]%(only for the luatex or the xetex engine)
+\setmainfont{Linux Libertine O}
+
+% package for formatting examples
+\usepackage{langsci-gb4e}%\noautomath
+% italicize examples -- comment this out if you don't want italics
+\let\eachwordone=\itshape
+
+% shortcuts and other user-defined commands
+\input{localcommands}
+
+
+
+
+% metadata
+\title{ { Writing you dissertation with \LaTeX } 
+\\ {\large University of Hawai‘i at Mānoa} }
+\author{ Gary Holton \\ holton@hawaii.edu}
+\date{February 12, 2021}
+
+% \usepackage{natbib}
+\begin{document}
+
+\maketitle
+\frontmatter
+
+\chapter{Abstract}
+This guide provides a gentle introduction to writing your linguistics dissertation using \LaTeX. For best results, copy the entire project and then open in a {\LaTeX} compiler to compare the source code and the compiled typeset document. 
+
+
+% \chapter{Dedication}
+% To my dear advisor
+
+% \chapter{Acknowledgements}
+% I want to thank...
+
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter
+
+%% include chapters here
+%% if you only want to work on a specific chapter, then you can comment the others out 
+\include{chapters/intro}
+\include{chapters/litreview}
+\include{chapters/data}
+\include{chapters/analysis}
+% \include{chapters/conclusion}
+
+
+\chapter*{References}\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{glossa}
+\bibliography{references}
+
+\include{chapters/appendix}
+
+
+\end{document}

@@ -1,0 +1,50 @@
+\chapter{Introduction}\label{chap:intro}
+This document is intended as a simple introduction to writing linguistics dissertations using {\LaTeX}. Individual chapters are stored as separate files in the chapters folder and then included in the main.tex document.  This is just a simple quick-start guide. For good tutorial see the guide on 
+\href{https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1):_Basic_Structure}{Overleaf.com}.
+
+{\LaTeX} is not a WYSIWYG (what you see is what you get) word processor. Instead you enter instructions (``source code'') which tell the {\LaTeX} how to compile your document. In most cases, {\LaTeX} does exactly what you tell it to do, though it can sometimes be difficult to make it do what you want it to do. 
+
+To make the most of this document, copy the project into Overleaf (or any other {\LaTeX} compiler) and compare the raw code with the compiled result. Play around with the code and see how your changes compile. 
+
+\section{First Section}\label{sec:fist_section_label}
+
+
+{\LaTeX} ignores extra white space, so don't worry about spaces. 
+
+However, you can use \verb|\hfill| \hfill to force text to the right side of the page. 
+
+Separate paragraphs with at least two carriage returns. If you want extra space following a paragraph, end it with double backslash \verb|\\|. \\
+
+\noindent
+If you don't want a paragraph to indent, place the \verb|\noindent| command before it.\\
+
+Be careful with special characters such as  \&, \%, \$, etc. These have special functions in {\LaTeX}, so to use them as regular characters you need to escape them with a backslash, i.e., \verb|\&|, \verb|\%|, \verb|\$|, etc.
+
+The percent sign is used for comments. This can be particularly useful as you are writing, as instead of deleting text you can just ``comment it out.''
+
+% Not sure I want to include this list ..
+% \begin{itemize}
+%     \item 
+%     \item 
+% \end{itemize}
+
+Note that by default {\LaTeX} will change plain apostrophes ( \textquotesingle\ and \textquotedbl\ ) into ``smart'' or ``curly'' quotes ( ' and ''\ ). To get left side quotes ( ` and ``\ ) you'll need to use the backtick ( \textasciigrave\ ).
+
+
+\subsection{My subsection}\label{sec:first}
+The \verb|itemize| environment is useful for creating bulleted lists:
+\begin{itemize}
+    \item Use \verb|\subsection{}| to mark second level headings
+    \item Use \verb|\subsubsection{}| to mark third level headings
+    \item Use \verb|\paragraph{}| to mark fourth level headings 
+\end{itemize}
+
+\noindent
+Label all of your sections, subsection, paragraphs, etc. with a mnemonic label useing \verb|\label{}| following the section. This facilitates cross-references to other parts of the document, such as the discussion of figures in §\ref{sec:figures}.
+
+\subsection{My second subsection}\label{sec:second}
+Never have just one subsection.
+
+
+\section{Second Section}
+Label all your sections and subsections so that you can make use of cross-referencing. For example, formatting of interlinear examples is discussed in §\ref{sec:interlinear}.
